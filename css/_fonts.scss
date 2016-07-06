@@ -1,0 +1,59 @@
+
+h1 {
+  font-family: $logo;
+  color: white;
+  font-weight: normal;
+}
+
+h2, h3, h4 {
+  font-family: $headline;
+  color: $lightgrey;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  font-family: $headline;
+  color: $mediumgrey;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  li {
+    display: inline-block;
+    &:nth-of-type(1) {
+      position: absolute;
+      left: 46%;
+      bottom: 1em;
+    }
+    a {
+      padding: 0px 10px;
+    }
+    a:hover, .current {
+      color: $darkgrey;
+        > span {
+        color: $red;
+      }
+    }
+  }
+}
+
+.content {
+  font-family: $body;
+  font-size: 1.3em;
+  color: $darkest;
+  p, ul, ol {
+    margin-bottom: 1em;
+  }
+}
+
+.content ul {
+  padding-left: 10px;
+}
+
+li {
+  margin: 8px 0;
+}

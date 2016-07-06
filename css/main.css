@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box; }
+
+.container {
+  margin: 0 auto;
+  width: 100%; }
+  @media screen and (min-width: 1000px) {
+    .container {
+      max-width: 1000px;
+      box-shadow: 0px 0px 10px gray; } }
+
+.content {
+  padding-top: 15px;
+  margin: 0 auto;
+  width: 94%;
+  min-height: 500px; }
+
+#yellow, #green {
+  position: absolute;
+  z-index: 100; }
+
+header, footer {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+header {
+  box-shadow: 0px 0px 10px #999999; }
+
+hgroup {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  top: 40px;
+  text-align: center; }
+
+header nav {
+  position: relative;
+  bottom: 5px; }
+
+#red {
+  width: 100%;
+  height: 145px;
+  background-color: rgba(204, 51, 51, 0.8);
+  transform: skewY(-9deg);
+  transform-origin: 0%;
+  overflow: hidden; }
+
+#header-bg {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  transform: skewY(9deg);
+  transform-origin: 0%;
+  background-image: url("../main-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#red2 {
+  background-color: rgba(204, 51, 51, 0.8);
+  width: 100%;
+  height: 100%; }
+
+#yellow {
+  width: 100%;
+  height: 145px;
+  background-color: rgba(255, 204, 102, 0.5);
+  transform: skewY(33deg);
+  transform-origin: 100%;
+  top: 0; }
+
+#fgroup {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  bottom: 25px;
+  right: 5px;
+  text-align: right; }
+
+footer h4 {
+  margin-right: 10px; }
+footer svg {
+  margin: 0 10px; }
+footer svg:hover path {
+  fill: white; }
+
+#blue {
+  width: 100%;
+  height: 145px;
+  background-color: rgba(51, 51, 204, 0.7);
+  transform: skewY(-13deg);
+  transform-origin: 100% 0%;
+  overflow: hidden; }
+
+#footer-bg {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  transform: skewY(13deg);
+  transform-origin: 100% 0%;
+  background-image: url("../main-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom; }
+
+#blue2 {
+  background-color: rgba(51, 51, 204, 0.7);
+  width: 100%;
+  height: 100%; }
+
+#green {
+  width: 100%;
+  height: 145px;
+  background-color: rgba(102, 204, 102, 0.5);
+  transform: skewY(38deg);
+  transform-origin: 0% 100%;
+  bottom: 0; }
+
+h1 {
+  font-family: Bungee, cursive;
+  color: white;
+  font-weight: normal; }
+
+h2, h3, h4 {
+  font-family: Courier, monospace;
+  color: #E6E6E6;
+  font-weight: normal; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+nav ul {
+  font-family: Courier, monospace;
+  color: #CCCCCC;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center; }
+  nav ul li {
+    display: inline-block; }
+    nav ul li:nth-of-type(1) {
+      position: absolute;
+      left: 46%;
+      bottom: 1em; }
+    nav ul li a {
+      padding: 0px 10px; }
+    nav ul li a:hover, nav ul li .current {
+      color: #999999; }
+      nav ul li a:hover > span, nav ul li .current > span {
+        color: #CC3333; }
+
+.content {
+  font-family: Eurostile, sans-serif;
+  font-size: 1.3em;
+  color: #666666; }
+  .content p, .content ul, .content ol {
+    margin-bottom: 1em; }
+
+.content ul {
+  padding-left: 10px; }
+
+li {
+  margin: 8px 0; }
+
+#about img {
+  display: block;
+  margin: 10px auto; }
+
+.title {
+  font-weight: bold; }
+
+#skills li {
+  font-size: 1.2em;
+  padding-left: 30px;
+  min-height: 25px;
+  background-repeat: no-repeat;
+  background-size: 25px 25px; }
+  #skills li:nth-of-type(1) {
+    background-image: url("../img/html5.svg"); }
+  #skills li:nth-of-type(2) {
+    background-image: url("../img/css3.svg"); }
+  #skills li:nth-of-type(3) {
+    background-image: url("../img/js.svg"); }
+  #skills li:nth-of-type(4) {
+    background-image: url("../img/git.svg"); }
+  #skills li:nth-of-type(5) {
+    background-image: url("../img/graphics.svg"); }
+#skills .title {
+  color: #CC3333; }
+
+#bio .title {
+  color: #3333CC; }
+
+#education .title {
+  color: #66CC66; }
+
+input:not(.button), textarea {
+  width: 100%;
+  margin: 5px 0;
+  font-size: 1em;
+  font-family: Eurostile, sans-serif;
+  color: #666666;
+  border: 2px solid #999999; }
+
+label {
+  color: #CC3333;
+  font-weight: bold; }
+
+input:not(.button) {
+  height: 35px; }
+
+textarea {
+  height: 200px; }
+
+input#submit-button {
+  height: 45px;
+  width: 115px;
+  background-color: #66CC66;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer; }
+  input#submit-button:hover {
+    background-color: #39ac39; }
+  input#submit-button:active {
+    box-shadow: inset 0px 0px 15px #666666; }
+
+fieldset {
+  text-align: center; }
+
+#contact-info {
+  text-align: right;
+  margin-bottom: 80px; }
+  #contact-info li {
+    font-size: 1.2em; }
+    #contact-info li img {
+      height: 25px;
+      position: relative;
+      top: 4px;
+      margin-right: 8px; }
+
+#portfolio {
+  text-align: center; }
+
+.project-container {
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden; }
+  .project-container h3 {
+    margin-bottom: 8px;
+    color: #CC3333; }
+  .project-container:hover > h3 {
+    color: #3333CC; }
+  .project-container:hover .image-overlay {
+    opacity: 1; }
+  .project-container:hover a {
+    opacity: 1;
+    top: 0px; }
+
+.project-image {
+  position: relative; }
+  .project-image img {
+    max-width: 100%;
+    display: block; }
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 2%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .4s; }
+  .image-overlay button {
+    background-color: #66CC66;
+    color: white;
+    font-size: 1em;
+    font-family: Eurostile, sans-serif;
+    padding: 10px 14px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer; }
+    .image-overlay button:hover {
+      background-color: #39ac39; }
+    .image-overlay button:active {
+      box-shadow: inset 0px 0px 15px #666666; }
+  .image-overlay a {
+    position: relative;
+    top: 80px;
+    opacity: 0;
+    transition-property: opacity, top;
+    transition-duration: .3s;
+    transition-delay: .3s; }
+
+.upcoming-project {
+  background-color: transparent;
+  font-size: 1.5em;
+  opacity: 1; }
+
+/*# sourceMappingURL=main.css.map */

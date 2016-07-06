@@ -1,0 +1,113 @@
+//MIXINS + EXTENDS
+@mixin skew-div($bgcolor, $degrees, $origin, $height) {
+  width: 100%;
+  height: $height;
+  background-color: $bgcolor;
+  transform: skewY($degrees);
+  transform-origin: $origin;
+}
+
+@mixin backdrop($degrees, $origin, $posit, $bgcolor:inherit, $height:100%) {
+  @include skew-div($bgcolor, $degrees, $origin, $height);
+  background-image: url("../main-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: $posit;
+}
+
+%overlap {
+  position: absolute;
+  z-index: 100;
+}
+
+//HEADER + FOOTER PROPERTIES
+header, footer {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+//HEADER
+header {
+  box-shadow: 0px 0px 10px $darkgrey;
+}
+
+hgroup {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  top: 40px;
+  text-align: center;
+}
+
+header nav {
+  position: relative;
+  bottom: 5px;
+}
+
+#red {
+  @include skew-div(rgba($red, 0.8), -9deg, 0%, 145px);
+  overflow: hidden;
+}
+
+#header-bg {
+  @include backdrop(9deg, 0%, center);
+}
+
+#red2 {
+  background-color: rgba($red, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+#yellow {
+  @include skew-div(rgba($yellow, 0.5), 33deg, 100%, 145px);
+  @extend %overlap;
+  top: 0;
+}
+
+//FOOTER
+
+//Maybe use a mixin for this block along with the hgroup block
+#fgroup {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  bottom: 25px;
+  right: 5px;
+  text-align: right;
+}
+
+footer {
+  h4 {
+    margin-right: 10px;
+  }
+
+  svg {
+    margin: 0 10px;
+  }
+
+  svg:hover path {
+    fill: white;
+  }
+}
+
+#blue {
+  @include skew-div(rgba($blue, 0.7), -13deg, 100% 0%, 145px);
+  overflow: hidden;
+}
+
+#footer-bg {
+  @include backdrop(13deg, 100% 0%, right bottom);
+}
+
+#blue2 {
+  background-color: rgba($blue, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+#green {
+  @include skew-div(rgba($green, 0.5), 38deg, 0% 100%, 145px);
+  @extend %overlap;
+  bottom: 0;
+}

@@ -1,0 +1,58 @@
+%input-style {
+  width: 100%;
+  margin: 5px 0;
+  font-size: 1em;
+  font-family: $body;
+  color: $darkest;
+  border: 2px solid $darkgrey;
+}
+
+label {
+  color: $red;
+  font-weight: bold;
+}
+
+input:not(.button) {
+  @extend %input-style;
+  height: 35px;
+}
+
+textarea {
+  @extend %input-style;
+  height: 200px;
+}
+
+input#submit-button {
+  height: 45px;
+  width: 115px;
+  background-color: $green;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($green, 15%);
+  }
+  &:active {
+    box-shadow: inset 0px 0px 15px $darkest;
+  }
+}
+
+fieldset {
+  text-align: center;
+}
+
+#contact-info {
+  text-align: right;
+  margin-bottom: 80px;
+  li {
+    font-size: 1.2em;
+    img {
+      height: 25px;
+      position: relative;
+      top: 4px;
+      margin-right: 8px;
+    }
+  }
+}
