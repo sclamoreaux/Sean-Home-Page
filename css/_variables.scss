@@ -15,3 +15,12 @@ $lightgrey : #E6E6E6;
 $mediumgrey : #CCCCCC;
 $darkgrey : #999999;
 $darkest : #666666;
+
+//Media Query breakpoints
+
+$brk-small : "screen and (min-width: 401px)";
+$brk-medium : "screen and (min-width: 520px)";
+$brk-big : "screen and (min-width: 665px)";
+$brk-ipad : "screen and (min-width: 768px)";
+$brk-wide : "screen and (min-width: 870px)";
+$brk-full: "screen and (min-width: 980px)";

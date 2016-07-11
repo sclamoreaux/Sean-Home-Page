@@ -14,6 +14,18 @@
   background-position: $posit;
 }
 
+@mixin adjust-skew($height, $degrees) {
+  height: $height;
+  transform: skewY($degrees);
+}
+
+@mixin adjust-skew-bd($height, $degrees) {
+  @include adjust-skew($height, $degrees);
+  > .backdrop {
+    transform: skewY(-$degrees);
+  }
+}
+
 %overlap {
   position: absolute;
   z-index: 100;
@@ -29,6 +41,9 @@ header, footer {
 //HEADER
 header {
   box-shadow: 0px 0px 10px $darkgrey;
+  @media #{$brk-ipad} {
+    box-shadow: none;
+  }
 }
 
 hgroup {
@@ -37,20 +52,114 @@ hgroup {
   width: 100%;
   top: 40px;
   text-align: center;
+  @media #{$brk-small} {
+    font-size: 1.1em;
+  }
+  @media #{$brk-medium} {
+    width: auto;
+    left: 15px;
+    top: 50px;
+  }
+  @media #{$brk-ipad} {
+    font-size: 1.2em;
+    width: auto;
+    top: 65px;
+    left: 25px;
+  }
+  @media #{$brk-full} {
+    font-size: 1.3em;
+  }
 }
 
+
+//NAVIGATION
 header nav {
   position: relative;
   bottom: 5px;
+  font-family: $headline;
+  color: $mediumgrey;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  @media #{$brk-small} {
+    font-size: 1.6em;
+    left: 5%;
+  }
+  @media #{$brk-medium} {
+    position: absolute;
+    right: 0%;
+    left: 17%;
+    bottom: 3px;
+    z-index: 400;
+  }
+  @media #{$brk-big} {
+    font-size: 1.7em;
+    bottom: 10px;
+    left: 19%;
+  }
+  @media #{$brk-ipad} {
+    text-align: right;
+    // font-size: 1.6em;
+    bottom: 65px;
+    right: 15px;
+  }
+  @media #{$brk-wide} {
+    bottom: 70px;
+  }
+  @media #{$brk-full} {
+    bottom: 50px;
+  }
 }
+
+nav li {
+    display: inline-block;
+    @media #{$brk-ipad} {
+      display: block;
+    }
+    @media #{$brk-wide} {
+      margin: 5px 0;
+    }
+    @media #{$brk-full} {
+      margin-top: 5px;
+    }
+    &:nth-of-type(1) {
+      position: absolute;
+      left: 46%;
+      bottom: 1em;
+      @media #{$brk-ipad} {
+        position: static;
+      }
+    }
+    a {
+      padding: 0px 10px;
+    }
+    a:hover, .current {
+      color: $darkgrey;
+        > span {
+        color: $red;
+      }
+    }
+  }
+
 
 #red {
   @include skew-div(rgba($red, 0.8), -9deg, 0%, 145px);
   overflow: hidden;
-}
-
-#header-bg {
-  @include backdrop(9deg, 0%, center);
+    > .backdrop {
+      @include backdrop(9deg, 0%, center);
+    }
+  @media #{$brk-small} {
+    height: 165px;
+  }
+  @media #{$brk-medium} {
+    height: 175px;
+  }
+  @media #{$brk-ipad} {
+    @include adjust-skew-bd(220px, -13deg);
+  }
+  @media #{$brk-full} {
+    @include adjust-skew-bd(220px, -10deg);
+  }
 }
 
 #red2 {
@@ -63,6 +172,18 @@ header nav {
   @include skew-div(rgba($yellow, 0.5), 33deg, 100%, 145px);
   @extend %overlap;
   top: 0;
+  @media #{$brk-small} {
+    @include adjust-skew(165px, 30deg);
+  }
+  @media #{$brk-medium} {
+    @include adjust-skew(175px, 28deg);
+  }
+  @media #{$brk-ipad} {
+    @include adjust-skew(210px, 22deg);
+  }
+  @media #{$brk-full} {
+    @include adjust-skew(210px, 16deg);
+  }
 }
 
 //FOOTER
@@ -75,9 +196,15 @@ header nav {
   bottom: 25px;
   right: 5px;
   text-align: right;
+  @media #{$brk-ipad} {
+    bottom: 45px;
+    right: 50px;
+  }
 }
 
 footer {
+  clear: both;
+  
   h4 {
     margin-right: 10px;
   }
@@ -94,10 +221,21 @@ footer {
 #blue {
   @include skew-div(rgba($blue, 0.7), -13deg, 100% 0%, 145px);
   overflow: hidden;
-}
-
-#footer-bg {
-  @include backdrop(13deg, 100% 0%, right bottom);
+  > .backdrop {
+    @include backdrop(13deg, 100% 0%, right bottom);
+  }
+  @media #{$brk-small} {
+    height: 165px;
+  }
+  @media #{$brk-medium} {
+    height: 175px;
+  }
+  @media #{$brk-ipad} {
+    @include adjust-skew-bd(190px, -10deg);
+  }
+  @media #{$brk-full} {
+    @include adjust-skew-bd(200px, -9deg);
+  }
 }
 
 #blue2 {
@@ -110,4 +248,16 @@ footer {
   @include skew-div(rgba($green, 0.5), 38deg, 0% 100%, 145px);
   @extend %overlap;
   bottom: 0;
+  @media #{$brk-small} {
+    @include adjust-skew(165px, 32deg);
+  }
+  @media #{$brk-medium} {
+    @include adjust-skew(175px, 28deg);
+  }
+  @media #{$brk-ipad} {
+    @include adjust-skew(170px, 22deg);
+  }
+  @media #{$brk-full} {
+    @include adjust-skew(180px, 15deg);
+  }
 }

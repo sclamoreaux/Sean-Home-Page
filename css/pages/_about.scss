@@ -1,6 +1,9 @@
 #about img {
   display: block;
   margin: 10px auto;
+  @media #{$brk-ipad} {
+
+  }
 }
 
 .title {
@@ -41,4 +44,10 @@
 
 #education .title {
   color: $green;
+}
+
+#bio {
+  @media #{$brk-ipad} {
+    
+  }
 }

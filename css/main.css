@@ -4,7 +4,7 @@
 .container {
   margin: 0 auto;
   width: 100%; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 980px) {
     .container {
       max-width: 1000px;
       box-shadow: 0px 0px 10px gray; } }
@@ -26,6 +26,9 @@ header, footer {
 
 header {
   box-shadow: 0px 0px 10px #999999; }
+  @media screen and (min-width: 768px) {
+    header {
+      box-shadow: none; } }
 
 hgroup {
   position: absolute;
@@ -33,10 +36,84 @@ hgroup {
   width: 100%;
   top: 40px;
   text-align: center; }
+  @media screen and (min-width: 401px) {
+    hgroup {
+      font-size: 1.1em; } }
+  @media screen and (min-width: 520px) {
+    hgroup {
+      width: auto;
+      left: 15px;
+      top: 50px; } }
+  @media screen and (min-width: 768px) {
+    hgroup {
+      font-size: 1.2em;
+      width: auto;
+      top: 65px;
+      left: 25px; } }
+  @media screen and (min-width: 980px) {
+    hgroup {
+      font-size: 1.3em; } }
 
 header nav {
   position: relative;
-  bottom: 5px; }
+  bottom: 5px;
+  font-family: Courier, monospace;
+  color: #CCCCCC;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center; }
+  @media screen and (min-width: 401px) {
+    header nav {
+      font-size: 1.6em;
+      left: 5%; } }
+  @media screen and (min-width: 520px) {
+    header nav {
+      position: absolute;
+      right: 0%;
+      left: 17%;
+      bottom: 3px;
+      z-index: 400; } }
+  @media screen and (min-width: 665px) {
+    header nav {
+      font-size: 1.7em;
+      bottom: 10px;
+      left: 19%; } }
+  @media screen and (min-width: 768px) {
+    header nav {
+      text-align: right;
+      bottom: 65px;
+      right: 15px; } }
+  @media screen and (min-width: 870px) {
+    header nav {
+      bottom: 70px; } }
+  @media screen and (min-width: 980px) {
+    header nav {
+      bottom: 50px; } }
+
+nav li {
+  display: inline-block; }
+  @media screen and (min-width: 768px) {
+    nav li {
+      display: block; } }
+  @media screen and (min-width: 870px) {
+    nav li {
+      margin: 5px 0; } }
+  @media screen and (min-width: 980px) {
+    nav li {
+      margin-top: 5px; } }
+  nav li:nth-of-type(1) {
+    position: absolute;
+    left: 46%;
+    bottom: 1em; }
+    @media screen and (min-width: 768px) {
+      nav li:nth-of-type(1) {
+        position: static; } }
+  nav li a {
+    padding: 0px 10px; }
+  nav li a:hover, nav li .current {
+    color: #999999; }
+    nav li a:hover > span, nav li .current > span {
+      color: #CC3333; }
 
 #red {
   width: 100%;
@@ -45,16 +122,33 @@ header nav {
   transform: skewY(-9deg);
   transform-origin: 0%;
   overflow: hidden; }
-
-#header-bg {
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  transform: skewY(9deg);
-  transform-origin: 0%;
-  background-image: url("../main-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center; }
+  #red > .backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    transform: skewY(9deg);
+    transform-origin: 0%;
+    background-image: url("../main-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center; }
+  @media screen and (min-width: 401px) {
+    #red {
+      height: 165px; } }
+  @media screen and (min-width: 520px) {
+    #red {
+      height: 175px; } }
+  @media screen and (min-width: 768px) {
+    #red {
+      height: 220px;
+      transform: skewY(-13deg); }
+      #red > .backdrop {
+        transform: skewY(13deg); } }
+  @media screen and (min-width: 980px) {
+    #red {
+      height: 220px;
+      transform: skewY(-10deg); }
+      #red > .backdrop {
+        transform: skewY(10deg); } }
 
 #red2 {
   background-color: rgba(204, 51, 51, 0.8);
@@ -68,6 +162,22 @@ header nav {
   transform: skewY(33deg);
   transform-origin: 100%;
   top: 0; }
+  @media screen and (min-width: 401px) {
+    #yellow {
+      height: 165px;
+      transform: skewY(30deg); } }
+  @media screen and (min-width: 520px) {
+    #yellow {
+      height: 175px;
+      transform: skewY(28deg); } }
+  @media screen and (min-width: 768px) {
+    #yellow {
+      height: 210px;
+      transform: skewY(22deg); } }
+  @media screen and (min-width: 980px) {
+    #yellow {
+      height: 210px;
+      transform: skewY(16deg); } }
 
 #fgroup {
   position: absolute;
@@ -76,13 +186,19 @@ header nav {
   bottom: 25px;
   right: 5px;
   text-align: right; }
+  @media screen and (min-width: 768px) {
+    #fgroup {
+      bottom: 45px;
+      right: 50px; } }
 
-footer h4 {
-  margin-right: 10px; }
-footer svg {
-  margin: 0 10px; }
-footer svg:hover path {
-  fill: white; }
+footer {
+  clear: both; }
+  footer h4 {
+    margin-right: 10px; }
+  footer svg {
+    margin: 0 10px; }
+  footer svg:hover path {
+    fill: white; }
 
 #blue {
   width: 100%;
@@ -91,16 +207,33 @@ footer svg:hover path {
   transform: skewY(-13deg);
   transform-origin: 100% 0%;
   overflow: hidden; }
-
-#footer-bg {
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  transform: skewY(13deg);
-  transform-origin: 100% 0%;
-  background-image: url("../main-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: right bottom; }
+  #blue > .backdrop {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    transform: skewY(13deg);
+    transform-origin: 100% 0%;
+    background-image: url("../main-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom; }
+  @media screen and (min-width: 401px) {
+    #blue {
+      height: 165px; } }
+  @media screen and (min-width: 520px) {
+    #blue {
+      height: 175px; } }
+  @media screen and (min-width: 768px) {
+    #blue {
+      height: 190px;
+      transform: skewY(-10deg); }
+      #blue > .backdrop {
+        transform: skewY(10deg); } }
+  @media screen and (min-width: 980px) {
+    #blue {
+      height: 200px;
+      transform: skewY(-9deg); }
+      #blue > .backdrop {
+        transform: skewY(9deg); } }
 
 #blue2 {
   background-color: rgba(51, 51, 204, 0.7);
@@ -114,6 +247,22 @@ footer svg:hover path {
   transform: skewY(38deg);
   transform-origin: 0% 100%;
   bottom: 0; }
+  @media screen and (min-width: 401px) {
+    #green {
+      height: 165px;
+      transform: skewY(32deg); } }
+  @media screen and (min-width: 520px) {
+    #green {
+      height: 175px;
+      transform: skewY(28deg); } }
+  @media screen and (min-width: 768px) {
+    #green {
+      height: 170px;
+      transform: skewY(22deg); } }
+  @media screen and (min-width: 980px) {
+    #green {
+      height: 180px;
+      transform: skewY(15deg); } }
 
 h1 {
   font-family: Bungee, cursive;
@@ -129,25 +278,6 @@ a {
   text-decoration: none;
   color: inherit; }
 
-nav ul {
-  font-family: Courier, monospace;
-  color: #CCCCCC;
-  font-weight: bold;
-  font-size: 1.5em;
-  text-align: center; }
-  nav ul li {
-    display: inline-block; }
-    nav ul li:nth-of-type(1) {
-      position: absolute;
-      left: 46%;
-      bottom: 1em; }
-    nav ul li a {
-      padding: 0px 10px; }
-    nav ul li a:hover, nav ul li .current {
-      color: #999999; }
-      nav ul li a:hover > span, nav ul li .current > span {
-        color: #CC3333; }
-
 .content {
   font-family: Eurostile, sans-serif;
   font-size: 1.3em;
@@ -158,7 +288,7 @@ nav ul {
 .content ul {
   padding-left: 10px; }
 
-li {
+.content li {
   margin: 8px 0; }
 
 #about img {
@@ -246,6 +376,14 @@ fieldset {
   max-width: 100%;
   margin: 20px auto;
   overflow: hidden; }
+  @media screen and (min-width: 520px) {
+    .project-container {
+      max-width: 550px; } }
+  @media screen and (min-width: 768px) {
+    .project-container {
+      max-width: 45%;
+      margin: 2.5%;
+      float: left; } }
   .project-container h3 {
     margin-bottom: 8px;
     color: #CC3333; }

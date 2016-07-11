@@ -6,6 +6,17 @@
   max-width: 100%;
   margin: 20px auto;
   overflow: hidden;
+  @media #{$brk-medium} {
+    max-width: 550px;
+  }
+  @media #{$brk-ipad} {
+    max-width: 45%;
+    margin: 2.5%;
+    float: left;
+  }
+  &:nth-of-type(2n) {
+
+  }
   h3 {
     margin-bottom: 8px;
     color: $red;
