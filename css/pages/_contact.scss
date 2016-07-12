@@ -55,4 +55,18 @@ fieldset {
       margin-right: 8px;
     }
   }
+
+  @media #{$brk-ipad} {
+    float: left;
+    width: 40%;
+    margin-right: 5%;
+  }
+}
+
+#contact-form {
+  @media #{$brk-ipad} {
+    float: right;
+    width: 50%;
+    margin-left: 5%;
+  }
 }

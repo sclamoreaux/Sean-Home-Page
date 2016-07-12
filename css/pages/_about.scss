@@ -2,7 +2,8 @@
   display: block;
   margin: 10px auto;
   @media #{$brk-ipad} {
-
+    float: right;
+    margin: 0 0 15px 15px;
   }
 }
 
@@ -32,6 +33,9 @@
     &:nth-of-type(5) {
       background-image: url("../img/graphics.svg");
     }
+    @media #{$brk-ipad} {
+      margin: 12px 0;
+    }
   }
   .title {
     color: $red;
@@ -46,8 +50,23 @@
   color: $green;
 }
 
-#bio {
+#education {
   @media #{$brk-ipad} {
-    
+    float: left;
+    width: 55%;
+    margin-right: 2.5%;
+    margin-bottom: -30px;
   }
+}
+
+#skills {
+  @media #{$brk-ipad} {
+    float: right;
+    width: 40%;
+    margin-left: 2.5%;
+  }
+}
+
+#bio {
+  margin-bottom: 30px;
 }

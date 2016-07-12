@@ -10,10 +10,20 @@
       box-shadow: 0px 0px 10px gray; } }
 
 .content {
-  padding-top: 15px;
   margin: 0 auto;
   width: 94%;
   min-height: 500px; }
+  @media screen and (min-width: 768px) {
+    .content {
+      margin-top: -18px; } }
+
+@media screen and (min-width: 665px) {
+  #content-container {
+    width: 90%;
+    margin: 0 auto; } }
+@media screen and (min-width: 870px) {
+  #content-container {
+    width: 84%; } }
 
 #yellow, #green {
   position: absolute;
@@ -25,7 +35,8 @@ header, footer {
   overflow: hidden; }
 
 header {
-  box-shadow: 0px 0px 10px #999999; }
+  box-shadow: 0px 0px 10px #999999;
+  margin-bottom: 20px; }
   @media screen and (min-width: 768px) {
     header {
       box-shadow: none; } }
@@ -81,14 +92,12 @@ header nav {
   @media screen and (min-width: 768px) {
     header nav {
       text-align: right;
-      bottom: 65px;
-      right: 15px; } }
+      font-size: 1.6em;
+      bottom: 48px; } }
   @media screen and (min-width: 870px) {
     header nav {
-      bottom: 70px; } }
-  @media screen and (min-width: 980px) {
-    header nav {
-      bottom: 50px; } }
+      font-size: 1.7em;
+      bottom: 47px; } }
 
 nav li {
   display: inline-block; }
@@ -128,9 +137,15 @@ nav li {
     background-color: inherit;
     transform: skewY(9deg);
     transform-origin: 0%;
-    background-image: url("../main-bg.jpg");
+    background-image: url("../img/bg-small.jpg");
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: top; }
+    @media screen and (min-width: 520px) {
+      #red > .backdrop {
+        background-image: url("../img/bg-medium.jpg"); } }
+    @media screen and (min-width: 665px) {
+      #red > .backdrop {
+        background-image: url("../img/bg-large.jpg"); } }
   @media screen and (min-width: 401px) {
     #red {
       height: 165px; } }
@@ -140,9 +155,9 @@ nav li {
   @media screen and (min-width: 768px) {
     #red {
       height: 220px;
-      transform: skewY(-13deg); }
+      transform: skewY(-11deg); }
       #red > .backdrop {
-        transform: skewY(13deg); } }
+        transform: skewY(11deg); } }
   @media screen and (min-width: 980px) {
     #red {
       height: 220px;
@@ -173,7 +188,7 @@ nav li {
   @media screen and (min-width: 768px) {
     #yellow {
       height: 210px;
-      transform: skewY(22deg); } }
+      transform: skewY(18deg); } }
   @media screen and (min-width: 980px) {
     #yellow {
       height: 210px;
@@ -192,7 +207,8 @@ nav li {
       right: 50px; } }
 
 footer {
-  clear: both; }
+  clear: both;
+  margin-top: -25px; }
   footer h4 {
     margin-right: 10px; }
   footer svg {
@@ -213,9 +229,15 @@ footer {
     background-color: inherit;
     transform: skewY(13deg);
     transform-origin: 100% 0%;
-    background-image: url("../main-bg.jpg");
+    background-image: url("../img/bg-small.jpg");
     background-repeat: no-repeat;
     background-position: right bottom; }
+    @media screen and (min-width: 520px) {
+      #blue > .backdrop {
+        background-image: url("../img/bg-medium.jpg"); } }
+    @media screen and (min-width: 665px) {
+      #blue > .backdrop {
+        background-image: url("../img/bg-large.jpg"); } }
   @media screen and (min-width: 401px) {
     #blue {
       height: 165px; } }
@@ -294,6 +316,10 @@ a {
 #about img {
   display: block;
   margin: 10px auto; }
+  @media screen and (min-width: 768px) {
+    #about img {
+      float: right;
+      margin: 0 0 15px 15px; } }
 
 .title {
   font-weight: bold; }
@@ -314,6 +340,9 @@ a {
     background-image: url("../img/git.svg"); }
   #skills li:nth-of-type(5) {
     background-image: url("../img/graphics.svg"); }
+  @media screen and (min-width: 768px) {
+    #skills li {
+      margin: 12px 0; } }
 #skills .title {
   color: #CC3333; }
 
@@ -322,6 +351,22 @@ a {
 
 #education .title {
   color: #66CC66; }
+
+@media screen and (min-width: 768px) {
+  #education {
+    float: left;
+    width: 55%;
+    margin-right: 2.5%;
+    margin-bottom: -30px; } }
+
+@media screen and (min-width: 768px) {
+  #skills {
+    float: right;
+    width: 40%;
+    margin-left: 2.5%; } }
+
+#bio {
+  margin-bottom: 30px; }
 
 input:not(.button), textarea {
   width: 100%;
@@ -368,9 +413,23 @@ fieldset {
       position: relative;
       top: 4px;
       margin-right: 8px; }
+  @media screen and (min-width: 768px) {
+    #contact-info {
+      float: left;
+      width: 40%;
+      margin-right: 5%; } }
+
+@media screen and (min-width: 768px) {
+  #contact-form {
+    float: right;
+    width: 50%;
+    margin-left: 5%; } }
 
 #portfolio {
   text-align: center; }
+  @media screen and (min-width: 768px) {
+    #portfolio {
+      margin-top: -45px; } }
 
 .project-container {
   max-width: 100%;

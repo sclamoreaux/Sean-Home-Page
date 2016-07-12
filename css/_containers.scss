@@ -12,8 +12,21 @@
 }
 
 .content {
-  padding-top: 15px;
   margin: 0 auto;
   width: 94%;
   min-height: 500px;
+  @media #{$brk-ipad} {
+    margin-top: -18px;
+  }
+
+}
+
+#content-container {
+  @media #{$brk-big} {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @media #{$brk-wide} {
+    width: 84%;
+  }
 }

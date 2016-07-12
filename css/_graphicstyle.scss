@@ -9,7 +9,7 @@
 
 @mixin backdrop($degrees, $origin, $posit, $bgcolor:inherit, $height:100%) {
   @include skew-div($bgcolor, $degrees, $origin, $height);
-  background-image: url("../main-bg.jpg");
+  background-image: url("../img/bg-small.jpg");
   background-repeat: no-repeat;
   background-position: $posit;
 }
@@ -41,6 +41,7 @@ header, footer {
 //HEADER
 header {
   box-shadow: 0px 0px 10px $darkgrey;
+  margin-bottom: 20px;
   @media #{$brk-ipad} {
     box-shadow: none;
   }
@@ -99,16 +100,16 @@ header nav {
   }
   @media #{$brk-ipad} {
     text-align: right;
-    // font-size: 1.6em;
-    bottom: 65px;
-    right: 15px;
+    font-size: 1.6em;
+    bottom: 48px;
   }
   @media #{$brk-wide} {
-    bottom: 70px;
+    font-size: 1.7em;
+    bottom: 47px;
   }
-  @media #{$brk-full} {
-    bottom: 50px;
-  }
+  // @media #{$brk-full} {
+  //   bottom: 50px;
+  // }
 }
 
 nav li {
@@ -146,7 +147,13 @@ nav li {
   @include skew-div(rgba($red, 0.8), -9deg, 0%, 145px);
   overflow: hidden;
     > .backdrop {
-      @include backdrop(9deg, 0%, center);
+      @include backdrop(9deg, 0%, top);
+      @media #{$brk-medium} {
+        background-image: url("../img/bg-medium.jpg");
+      }
+      @media #{$brk-big} {
+        background-image: url("../img/bg-large.jpg");
+      }
     }
   @media #{$brk-small} {
     height: 165px;
@@ -155,7 +162,7 @@ nav li {
     height: 175px;
   }
   @media #{$brk-ipad} {
-    @include adjust-skew-bd(220px, -13deg);
+    @include adjust-skew-bd(220px, -11deg);
   }
   @media #{$brk-full} {
     @include adjust-skew-bd(220px, -10deg);
@@ -179,7 +186,7 @@ nav li {
     @include adjust-skew(175px, 28deg);
   }
   @media #{$brk-ipad} {
-    @include adjust-skew(210px, 22deg);
+    @include adjust-skew(210px, 18deg);
   }
   @media #{$brk-full} {
     @include adjust-skew(210px, 16deg);
@@ -204,7 +211,7 @@ nav li {
 
 footer {
   clear: both;
-  
+  margin-top: -25px;
   h4 {
     margin-right: 10px;
   }
@@ -223,6 +230,12 @@ footer {
   overflow: hidden;
   > .backdrop {
     @include backdrop(13deg, 100% 0%, right bottom);
+    @media #{$brk-medium} {
+      background-image: url("../img/bg-medium.jpg");
+    }
+    @media #{$brk-big} {
+      background-image: url("../img/bg-large.jpg");
+    }
   }
   @media #{$brk-small} {
     height: 165px;

@@ -1,5 +1,8 @@
 #portfolio {
   text-align: center;
+  @media #{$brk-ipad} {
+    margin-top: -45px;
+  }
 }
 
 .project-container {
