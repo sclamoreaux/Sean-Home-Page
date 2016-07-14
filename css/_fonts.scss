@@ -23,6 +23,15 @@ a {
   p, ul, ol {
     margin-bottom: 1em;
   }
+  a {
+    color: darken($green, 15%);
+    &:hover {
+      color: $green;
+    }
+    &.button {
+      @extend %button-style;
+    }
+  }
 }
 
 .content ul {

@@ -1,3 +1,17 @@
+.content a.button {
+  background-color: #66CC66;
+  color: white;
+  font-size: 1em;
+  font-family: Eurostile, sans-serif;
+  padding: 10px 14px;
+  margin: 0 5px;
+  border: none; }
+  .content a.button:hover {
+    color: white;
+    background-color: #39ac39; }
+  .content a.button:active {
+    box-shadow: inset 0px 0px 15px #666666; }
+
 * {
   box-sizing: border-box; }
 
@@ -64,12 +78,18 @@ hgroup {
   @media screen and (min-width: 980px) {
     hgroup {
       font-size: 1.3em; } }
+  hgroup img {
+    position: absolute;
+    width: 120px;
+    right: 50%;
+    top: -65%;
+    z-index: -1; }
 
 header nav {
   position: relative;
   bottom: 5px;
   font-family: Courier, monospace;
-  color: #CCCCCC;
+  color: #999999;
   font-weight: bold;
   font-size: 1.5em;
   text-align: center; }
@@ -120,7 +140,7 @@ nav li {
   nav li a {
     padding: 0px 10px; }
   nav li a:hover, nav li .current {
-    color: #999999; }
+    color: #666666; }
     nav li a:hover > span, nav li .current > span {
       color: #CC3333; }
 
@@ -306,6 +326,10 @@ a {
   color: #666666; }
   .content p, .content ul, .content ol {
     margin-bottom: 1em; }
+  .content a {
+    color: #39ac39; }
+    .content a:hover {
+      color: #66CC66; }
 
 .content ul {
   padding-left: 10px; }
@@ -321,9 +345,15 @@ a {
       float: right;
       margin: 0 0 15px 15px; } }
 
-.title {
-  font-weight: bold; }
+#about span {
+  color: #3333CC; }
 
+.title {
+  font-weight: bold;
+  color: #CC3333; }
+
+#skills .button-center {
+  text-align: center; }
 #skills li {
   font-size: 1.2em;
   padding-left: 30px;
@@ -343,14 +373,12 @@ a {
   @media screen and (min-width: 768px) {
     #skills li {
       margin: 12px 0; } }
-#skills .title {
-  color: #CC3333; }
 
-#bio .title {
-  color: #3333CC; }
-
-#education .title {
-  color: #66CC66; }
+@media screen and (min-width: 768px) {
+  #skills {
+    float: right;
+    width: 40%;
+    margin-left: 2.5%; } }
 
 @media screen and (min-width: 768px) {
   #education {
@@ -358,12 +386,6 @@ a {
     width: 55%;
     margin-right: 2.5%;
     margin-bottom: -30px; } }
-
-@media screen and (min-width: 768px) {
-  #skills {
-    float: right;
-    width: 40%;
-    margin-left: 2.5%; } }
 
 #bio {
   margin-bottom: 30px; }

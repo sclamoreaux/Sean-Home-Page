@@ -7,11 +7,20 @@
   }
 }
 
+#about span {
+  color: $blue;
+}
+
 .title {
   font-weight: bold;
+  color: $red;
 }
 
 #skills {
+  .button-center {
+    text-align: center;
+  }
+
   li {
     font-size: 1.2em;
     padding-left: 30px;
@@ -37,26 +46,9 @@
       margin: 12px 0;
     }
   }
-  .title {
-    color: $red;
-  }
-}
-
-#bio .title {
-  color: $blue;
-}
-
-#education .title {
-  color: $green;
-}
-
-#education {
-  @media #{$brk-ipad} {
-    float: left;
-    width: 55%;
-    margin-right: 2.5%;
-    margin-bottom: -30px;
-  }
+  // .title {
+  //   color: $blue;
+  // }
 }
 
 #skills {
@@ -64,6 +56,23 @@
     float: right;
     width: 40%;
     margin-left: 2.5%;
+  }
+}
+
+// #bio .title {
+//   color: $blue;
+// }
+//
+// #education .title {
+//   color: $blue;
+// }
+
+#education {
+  @media #{$brk-ipad} {
+    float: left;
+    width: 55%;
+    margin-right: 2.5%;
+    margin-bottom: -30px;
   }
 }
 

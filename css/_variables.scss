@@ -24,3 +24,23 @@ $brk-big : "screen and (min-width: 665px)";
 $brk-ipad : "screen and (min-width: 768px)";
 $brk-wide : "screen and (min-width: 870px)";
 $brk-full: "screen and (min-width: 980px)";
+
+
+//Global Button Style
+
+%button-style {
+  background-color: $green;
+  color: white;
+  font-size: 1em;
+  font-family: $body;
+  padding: 10px 14px;
+  margin: 0 5px;
+  border: none;
+  &:hover {
+    color: white;
+    background-color: darken($green, 15%);
+  }
+  &:active {
+    box-shadow: inset 0px 0px 15px $darkest;
+  }
+}
