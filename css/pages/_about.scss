@@ -1,15 +1,16 @@
 #about img {
   display: block;
   margin: 10px auto;
+  opacity: .9;
   @media #{$brk-ipad} {
     float: right;
     margin: 0 0 15px 15px;
   }
 }
 
-#about span {
-  color: $blue;
-}
+// #about span {
+//   color: $blue;
+// }
 
 .title {
   font-weight: bold;
@@ -59,13 +60,13 @@
   }
 }
 
-// #bio .title {
-//   color: $blue;
-// }
-//
-// #education .title {
-//   color: $blue;
-// }
+#bio .title {
+  color: $blue;
+}
+
+#education .title {
+  color: $green;
+}
 
 #education {
   @media #{$brk-ipad} {

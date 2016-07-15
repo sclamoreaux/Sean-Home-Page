@@ -24,9 +24,9 @@ a {
     margin-bottom: 1em;
   }
   a {
-    color: darken($green, 15%);
+    color: lighten($blue, 15%);
     &:hover {
-      color: $green;
+      color: $blue;
     }
     &.button {
       @extend %button-style;

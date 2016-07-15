@@ -47,7 +47,7 @@ header {
   }
 }
 
-hgroup {
+.hgroup {
   position: absolute;
   z-index: 200;
   width: 100%;
@@ -77,10 +77,13 @@ hgroup {
 
   img {
     position: absolute;
-    width: 120px;
+    width: 135px;
     right: 50%;
-    top: -65%;
+    top: -75%;
     z-index: -1;
+  }
+  h1 {
+    text-shadow: -2px 0px 2px rgba($darkest, 0.8);
   }
 }
 
@@ -90,7 +93,7 @@ header nav {
   position: relative;
   bottom: 5px;
   font-family: $headline;
-  color: $darkgrey;
+  color: $mediumgrey;
   font-weight: bold;
   font-size: 1.5em;
   text-align: center;
@@ -111,6 +114,7 @@ header nav {
     left: 19%;
   }
   @media #{$brk-ipad} {
+    color: $darkgrey;
     text-align: right;
     font-size: 1.6em;
     bottom: 48px;
@@ -147,7 +151,10 @@ nav li {
       padding: 0px 10px;
     }
     a:hover, .current {
-      color: $darkest;
+      color: $darkgrey;
+      @media #{$brk-ipad} {
+        color: $darkest;
+      }
         > span {
         color: $red;
       }

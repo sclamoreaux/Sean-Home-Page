@@ -55,41 +55,43 @@ header {
     header {
       box-shadow: none; } }
 
-hgroup {
+.hgroup {
   position: absolute;
   z-index: 200;
   width: 100%;
   top: 40px;
   text-align: center; }
   @media screen and (min-width: 401px) {
-    hgroup {
+    .hgroup {
       font-size: 1.1em; } }
   @media screen and (min-width: 520px) {
-    hgroup {
+    .hgroup {
       width: auto;
       left: 15px;
       top: 50px; } }
   @media screen and (min-width: 768px) {
-    hgroup {
+    .hgroup {
       font-size: 1.2em;
       width: auto;
       top: 65px;
       left: 25px; } }
   @media screen and (min-width: 980px) {
-    hgroup {
+    .hgroup {
       font-size: 1.3em; } }
-  hgroup img {
+  .hgroup img {
     position: absolute;
-    width: 120px;
+    width: 135px;
     right: 50%;
-    top: -65%;
+    top: -75%;
     z-index: -1; }
+  .hgroup h1 {
+    text-shadow: -2px 0px 2px rgba(102, 102, 102, 0.8); }
 
 header nav {
   position: relative;
   bottom: 5px;
   font-family: Courier, monospace;
-  color: #999999;
+  color: #CCCCCC;
   font-weight: bold;
   font-size: 1.5em;
   text-align: center; }
@@ -111,6 +113,7 @@ header nav {
       left: 19%; } }
   @media screen and (min-width: 768px) {
     header nav {
+      color: #999999;
       text-align: right;
       font-size: 1.6em;
       bottom: 48px; } }
@@ -140,7 +143,10 @@ nav li {
   nav li a {
     padding: 0px 10px; }
   nav li a:hover, nav li .current {
-    color: #666666; }
+    color: #999999; }
+    @media screen and (min-width: 768px) {
+      nav li a:hover, nav li .current {
+        color: #666666; } }
     nav li a:hover > span, nav li .current > span {
       color: #CC3333; }
 
@@ -327,9 +333,9 @@ a {
   .content p, .content ul, .content ol {
     margin-bottom: 1em; }
   .content a {
-    color: #39ac39; }
+    color: #7070db; }
     .content a:hover {
-      color: #66CC66; }
+      color: #3333CC; }
 
 .content ul {
   padding-left: 10px; }
@@ -339,14 +345,12 @@ a {
 
 #about img {
   display: block;
-  margin: 10px auto; }
+  margin: 10px auto;
+  opacity: .9; }
   @media screen and (min-width: 768px) {
     #about img {
       float: right;
       margin: 0 0 15px 15px; } }
-
-#about span {
-  color: #3333CC; }
 
 .title {
   font-weight: bold;
@@ -379,6 +383,12 @@ a {
     float: right;
     width: 40%;
     margin-left: 2.5%; } }
+
+#bio .title {
+  color: #3333CC; }
+
+#education .title {
+  color: #66CC66; }
 
 @media screen and (min-width: 768px) {
   #education {
@@ -427,16 +437,17 @@ fieldset {
 
 #contact-info {
   text-align: right;
-  margin-bottom: 80px; }
+  margin-bottom: 40px; }
   #contact-info li {
     font-size: 1.2em; }
-    #contact-info li img {
+    #contact-info li img.icon {
       height: 25px;
       position: relative;
       top: 4px;
       margin-right: 8px; }
   @media screen and (min-width: 768px) {
     #contact-info {
+      margin-bottom: 0;
       float: left;
       width: 40%;
       margin-right: 5%; } }
