@@ -1,0 +1,18 @@
+    <div id="contact-form">
+      <form id="ajax-contact" action="mailer.php" method="post">
+          <label>Your Name:<br />
+            <input type="text" id="name" name="your-name" required="required" />
+          </label><br />
+          <label>Your E-mail:<br />
+            <input type="email" id="email" name="your-email" required="required"/>
+          </label><br />
+          <label>Subject:<br />
+            <input type="text" name="subject" required="required" />
+          </label><br />
+          <label>Message:<br />
+            <textarea id="message" name="message" required="required">Please type your message...</textarea>
+          </label><br />
+        <fieldset>
+          <input type="submit" id="submit-button" value="Submit">
+        </fieldset>
+      </form>

@@ -39,17 +39,14 @@ input#submit-button {
   }
 }
 
-fieldset {
+.fieldset {
   text-align: center;
 }
 
 #contact-info {
   text-align: right;
   margin-bottom: 40px;
-  // img {
-  //   max-width: 100%;
-  //   opacity: .9;
-  // }
+
   li {
     font-size: 1.2em;
     img.icon {
@@ -74,4 +71,14 @@ fieldset {
     width: 50%;
     margin-left: 5%;
   }
+
+  // img {
+  //   max-width: 100%;
+  //   opacity: .9;
+  //   margin: 10px auto;
+  // }
+  //
+  // .form-container {
+  //   display: none;
+  // }
 }
